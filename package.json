@@ -15,10 +15,10 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modulest src/server.ts",
+    "dev": "ts-node-dev --transpile-only src/server.ts",
     "migrations:up": "knex --knexfile knexfile.ts migrate:latest",
     "migrations:rollback": "knex --knexfile knexfile.ts migrate:rollback",
-    "test": "cross-env ESTADO_DA_APLICACAO=testing jest"
+    "test": "cross-env ESTADO_DA_APLICACAO=testing jest --watch"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
